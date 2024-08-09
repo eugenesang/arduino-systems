@@ -1,0 +1,106 @@
+{
+    "analog": {
+        "A0": {
+            "IO": "I",
+            "component": "",
+            "description": "Detached"
+        },
+        "A1": {
+            "IO": "I",
+            "component": "",
+            "description": "Detached"
+        },
+        "A2": {
+            "IO": "I",
+            "component": "",
+            "description": "Detached"
+        },
+        "A3": {
+            "IO": "I",
+            "component": "",
+            "description": "Detached"
+        },
+        "A4": {
+            "IO": "I",
+            "component": "",
+            "description": "Detached"
+        },
+        "A5": {
+            "IO": "I",
+            "component": "",
+            "description": "Detached"
+        }
+    },
+    "digital": {
+        "0": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "1": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "2": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "3": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "4": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "5": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "6": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "7": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "8": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "9": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "10": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "11": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "12": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "13": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        }
+    }
+}
