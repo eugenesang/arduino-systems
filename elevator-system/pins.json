@@ -1,0 +1,106 @@
+{
+    "analog": {
+        "A0": {
+            "IO": "I",
+            "component": "Potentiometer",
+            "description": "Input simulating weight sensor"
+        },
+        "A1": {
+            "IO": "I",
+            "component": "",
+            "description": "Detached"
+        },
+        "A2": {
+            "IO": "I",
+            "component": "",
+            "description": "Detached"
+        },
+        "A3": {
+            "IO": "I",
+            "component": "",
+            "description": "Detached"
+        },
+        "A4": {
+            "IO": "I",
+            "component": "",
+            "description": "Detached"
+        },
+        "A5": {
+            "IO": "I",
+            "component": "",
+            "description": "Detached"
+        }
+    },
+    "digital": {
+        "0": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "1": {
+            "IO": "O",
+            "component": "",
+            "description": "Detached"
+        },
+        "2": {
+            "IO": "O",
+            "component": "LED",
+            "description": "Indicates that the elevator is in floor 1"
+        },
+        "3": {
+            "IO": "O",
+            "component": "LED",
+            "description": "Indicates that the elevator is in floor 2"
+        },
+        "4": {
+            "IO": "O",
+            "component": "LED",
+            "description": "Indicates that the elevator is in floor 2"
+        },
+        "5": {
+            "IO": "O",
+            "component": "LED",
+            "description": "Indicated that the elevator is moving UP"
+        },
+        "6": {
+            "IO": "O",
+            "component": "LED",
+            "description": "Indicated that the elevator is moving DOWN"
+        },
+        "7": {
+            "IO": "I",
+            "component": "Push Button",
+            "description": "Tells the system to go to floor 1"
+        },
+        "8": {
+            "IO": "I",
+            "component": "Push Button",
+            "description": "Tells the system to go to floor 2"
+        },
+        "9": {
+            "IO": "I",
+            "component": "Push Button",
+            "description": "Tells the system to go to floor 3"
+        },
+        "10": {
+            "IO": "I",
+            "component": "Push Button",
+            "description": "Tells the system to execute emergency stop"
+        },
+        "11": {
+            "IO": "I",
+            "component": "Push Button",
+            "description": "Tells the system to execute instruction override"
+        },
+        "12": {
+            "IO": "I",
+            "component": "LED",
+            "description": "Indicates the the system has executed the system override"
+        },
+        "13": {
+            "IO": "I",
+            "component": "LED",
+            "description": "Indicates the the system has executed the emergency stop"
+        }
+    }
+}
