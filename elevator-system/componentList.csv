@@ -1,0 +1,11 @@
+Name                                                                            ,Quantity ,Component
+"Ucontroller"                                                                   ,       1 ," Arduino Uno R3"
+"Dfloor 1 LED, Dfloor 2 LED, Dfloor 3 LED"                                      ,       3 ,"Blue LED"
+"DElevator Down1"                                                               ,       1 ,"Yellow LED"
+"DElevator Up"                                                                  ,       1 ,"Green LED"
+"R1, R2, R3, R4, R11, R12"                                                      ,       6 ,"590 Ω Resistor"
+"R5"                                                                            ,       1 ,"10 MΩ Resistor"
+"Rpotweight sensor"                                                             ,       1 ,"250 kΩ Potentiometer"
+"DEmergency Stop LED, DOverride LED"                                            ,       2 ,"Red LED"
+"R6, R7, R8, R9, R10"                                                           ,       5 ,"10 kΩ Resistor"
+"SFloor 3 Btn1, SFloor 2 Btn, SFloor 1 Btn, SEmergency Stop Btn, SOverride Btn" ,       5 ," Pushbutton"
