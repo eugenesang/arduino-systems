@@ -33,6 +33,8 @@ bool emergencyStopOn = false;
 
 void setup()
 {
+    Serial.begin(9600); // Initialize serial communication at 9600 baud
+    
     // Floor buttons
     pinMode(FLOOR_1_BTN, INPUT); // floor 1
     pinMode(FLOOR_2_BTN, INPUT); // floor 2
