@@ -224,7 +224,7 @@ void handleButtonPress()
 void emergencyStop()
 {
     emergencyStopOn = !emergencyStopOn;
-
+    emergencyStopOn = true;
     Serial.println("Emergency stop initiated");
 }
 
