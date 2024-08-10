@@ -88,30 +88,30 @@ void addNextFloor(int floorNumber)
             direction = (floorNumber > currentFloor) ? 1 : -1;
         }
 
-        Serial.println("Floor ");
-        Serial.println(floorNumber);
+        Serial.print("Floor ");
+        Serial.print(floorNumber);
         Serial.println(" request added");
     }
     else if (direction == 1 && floorNumber < currentFloor)
     {
         // If moving up, and a lower floor is requested, allow adding it
         nextFloor[floorNumber - 1] = 1;
-        Serial.println("Floor");
-        Serial.println(floorNumber);
+        Serial.print("Floor");
+        Serial.print(floorNumber);
         Serial.println(" request added.");
     }
     else if (direction == -1 && floorNumber > currentFloor)
     {
         // If moving down, and a higher floor is requested, allow adding it
         nextFloor[floorNumber - 1] = 1;
-        Serial.println("Floor");
-        Serial.println(floorNumber);
+        Serial.print("Floor");
+        Serial.print(floorNumber);
         Serial.println(" request added.");
     }
     else
     {
-        Serial.println("Floor");
-        Serial.println(floorNumber);
+        Serial.print("Floor");
+        Serial.print(floorNumber);
         Serial.println(" request ignored due to current direction.");
     }
 }
