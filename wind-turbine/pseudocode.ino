@@ -1,6 +1,7 @@
 /**
  * # Wind Turbine Controller
  * A system that controls a wind turbine's orientation and blade pitch based on wind speed and direction.
+ * It also logs data at regular intervals and performs end-of-day summary logging.
  *
  * C++ Arduino Code
  */
@@ -12,55 +13,55 @@
 // Pin for turbine orientation servo                  Pin 2
 // Pin for blade pitch servo                          Pin 3
 // Pin for emergency stop button                      Pin 4
+// Pin for end-of-day data logging button             Pin 5
 
 // Constants
-// Minimum operational wind speed (cut-in speed)      5.0 m/s
-// Maximum operational wind speed (cut-out speed)     25.0 m/s
-// Logging interval                                   1 minute (60000 ms)
-// Daily data logging interval                        24 hours (86400000 ms)
+// Minimum operational wind speed (cut-in speed)      User-defined (e.g., 3.0 m/s)
+// Maximum operational wind speed (cut-out speed)     User-defined (e.g., 25.0 m/s)
+// Maximum log storage                                60 logs (1 log per minute for 1 hour)
 
 // Variables
 
 // Servo object for controlling turbine orientation
 // Servo object for controlling blade pitch
-// Last log time                                      Timestamp of the last data log
-// Last daily log time                                Timestamp of the last end-of-day data log
+// Previous wind speed                                Last recorded wind speed
+// Previous wind direction                            Last recorded wind direction
+// Array of logs                                      Stores wind speed, direction, and angles
+// Current log index                                  Index to store the next log
 
 /** ## Setup
  * This function initializes the system by setting up:
- * - The emergency stop button
+ * - The emergency stop and end-of-day data logging buttons
  * - Servo motors for turbine orientation and blade pitch
  * - Serial communication for logging
+ * - User-defined cut-in and cut-out speeds
  */
 void setup()
 {
-    // Configure the emergency stop button pin as input with pull-up resistor
+    // Configure the emergency stop and end-of-day data logging button pins as input with pull-up resistors
     // Attach the turbine orientation servo to the specified pin
     // Attach the blade pitch servo to the specified pin
 
     // Initialize serial communication for logging data
-    // Output a system initialization message via serial
+    // Get user input for cut-in and cut-out wind speeds
+    // Output system ready message via serial
 }
 
 /** ## The Main Loop
  * This is the main loop of the program. It continuously:
- * - Monitors the emergency stop button
+ * - Monitors the emergency stop and end-of-day data logging buttons
  * - Reads wind speed and direction from sensors
  * - Controls the turbine orientation and blade pitch based on wind conditions
- * - Logs data at regular intervals
- * - Logs daily summary data at the end of each 24-hour period
+ * - Logs data if wind conditions change
  */
 void loop()
 {
     // Check if the emergency stop button is pressed
+    // If the end-of-day data logging button is pressed, log summary data
 
-    // If the emergency stop button is not pressed:
-    // - Read the wind speed from the sensor
-    // - Read the wind direction from the sensor
-    // - Adjust turbine orientation and blade pitch based on the wind conditions
-
-    // Log data at regular intervals
-    // Log end-of-day summary data at the end of each 24-hour period
+    // Read the wind speed and direction from sensors
+    // Adjust turbine orientation and blade pitch based on the wind conditions
+    // Log data if wind speed or direction changes
 
     // Add a small delay to reduce CPU usage
 }
@@ -70,7 +71,7 @@ void loop()
  * It immediately:
  * - Stops the turbine by setting the orientation to a neutral position
  * - Sets the blade pitch to zero degrees
- * - Halts the program indefinitely
+ * - Waits for the emergency stop button to be released before resuming operation
  */
 void handleEmergencyStop()
 {
@@ -79,7 +80,7 @@ void handleEmergencyStop()
     // - Log an emergency stop message
     // - Set turbine orientation to a neutral position (90 degrees)
     // - Set blade pitch to zero degrees
-    // - Enter an infinite loop to halt further operation
+    // - Wait until the button is released to resume operation
 }
 
 /** ## Read Wind Speed
@@ -90,7 +91,6 @@ float readWindSpeed()
 {
     // Read the analog value from the wind speed sensor
     // Convert the analog value to wind speed in m/s
-    // Log the raw sensor value
     // Return the calculated wind speed
 }
 
@@ -102,7 +102,6 @@ float readWindDirection()
 {
     // Read the analog value from the wind direction sensor
     // Convert the analog value to wind direction in degrees
-    // Log the raw sensor value
     // Return the calculated wind direction
 }
 
@@ -116,7 +115,7 @@ void controlTurbineAndBlades(float windSpeed, float windDirection)
     // If within range:
     // - Calculate the turbine orientation angle based on wind direction (0-180 degrees)
     // - Adjust the blade pitch angle based on wind speed (0-45 degrees)
-    // - Log the wind speed, direction, and blade pitch for monitoring
+    // - Log the turbine and blade pitch angles for monitoring
 
     // If wind speed is outside the operational range:
     // - Set blade pitch to zero degrees
@@ -124,23 +123,22 @@ void controlTurbineAndBlades(float windSpeed, float windDirection)
 }
 
 /** ## Log Data
- * This function logs data at regular intervals.
- * It checks if the current time exceeds the last log time by the specified interval and logs the necessary data.
+ * This function logs data when wind speed or direction changes.
+ * It stores the wind speed, direction, and turbine/blade angles in an array.
  */
-void logData()
+void logData(float windSpeed, float windDirection)
 {
-    // Get the current time in milliseconds
-    // Check if the time since the last log exceeds the logging interval
-    // If yes, log the data and update the last log time
+    // Log the wind speed, direction, turbine angle, and blade pitch angle
+    // Store the data in the log array
+    // Increment the log index to store the next data point
 }
 
 /** ## End-of-Day Data Logging
- * This function logs summary data at the end of each 24-hour period.
- * It provides an overview of the wind conditions over the day, including the last measured wind speed and direction.
+ * This function logs summary data at the end of the day when the corresponding button is pressed.
+ * It provides an overview of the wind conditions, including all logged wind speed, direction, and angle data.
  */
-void logEndOfDayData(float windSpeed, float windDirection)
+void logEndOfDayData()
 {
-    // Get the current time in milliseconds
-    // Check if the time since the last daily log exceeds the daily logging interval
-    // If yes, log the summary data and update the last daily log time
+    // Log a summary of all recorded data for the day
+    // Output the summary via serial communication
 }
